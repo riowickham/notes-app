@@ -23,3 +23,14 @@ fun readNextChar(prompt: String?): Char {
         }
     } while (true)
 }
+
+fun readNextDouble(prompt: String?): Double {
+    do {
+        try {
+            print(prompt)
+            return readln().toDouble()
+        } catch (e: NumberFormatException) {
+            System.err.println("\tEnter a double please. ")
+        }
+    } while (true)
+}
